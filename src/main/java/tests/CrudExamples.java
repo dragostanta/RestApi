@@ -73,8 +73,11 @@ public class CrudExamples {
 	@Test(priority=2)
 	public void getTodo() {
 		
-		Response response = given().
-				get("/api/"+id).
+		Response response = 
+				given().
+					contentType(ContentType.JSON).
+				when().
+					get("/api/"+id).
 				then().
 				statusCode(200).extract().response();
 				
