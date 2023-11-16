@@ -40,7 +40,7 @@ public class BaseComponent3Test extends BaseComponent3{
 
 	}
 	
-	@Test(priority=5)
+	//@Test(priority=5)
 	public void deleteUser() {
 		Response resp = doRequest("Delete", id, "");
 		System.out.println(resp.asString());

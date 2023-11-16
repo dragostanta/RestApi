@@ -34,5 +34,27 @@ public class DataBuilder {
 	}
 	
 	
+	public static JSONObject buildToken() {
+		JSONObject obj = new JSONObject();
+		obj.put("username", "admin");
+		obj.put("password", "password123");	
+		return obj;
+		
+	}
+	
+	public static JSONObject buildBooking() {
+		JSONObject booking = new JSONObject();
+		booking.put("firstname" , "Jim");
+		booking.put( "lastname" , "Brown");
+		booking.put( "totalprice" , 111);
+		booking.put( "depositpaid" ,true);
+			JSONObject bookingDates =  new JSONObject();
+			bookingDates.put("checkin" , "2018-01-01");
+			bookingDates.put("checkout" , "2019-01-01");
+		booking.put("bookingdates", bookingDates);	
+		booking.put("additionalneeds" , "Breakfast");
+		
+		return booking;
+	}
 
 }
